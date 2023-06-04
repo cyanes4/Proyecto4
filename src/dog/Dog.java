@@ -1,125 +1,123 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package dog;
 
 /**
- * Esta clase implementa el tipo de dato abstracto Perro
+ *
  * @author Alejandro
- * @version 1
  */
-
-public class Dog {
-
-    // Instance Variables
-    /** name es el nombre de la mascota */
-    private String name;
-    /** breed es la raza del perro */
-    private String breed;
-     /** color es el color del perro */
-    private String color;
-      /** age es la edad del perro en años */
-    private int age;
-
-    
-    /**
-     * Declaración del constructor de la clase
-     * @param name es el nombre de la mascota
-     * @param breed es la raza del perro
-     * @param color es el color del perro
-     * @param age es la edad del perro en años
-     */
-    public Dog(String name, String breed, int age, String color) {
-        this.name = name;
-        this.breed = breed;
-        this.age = age;
-        this.color = color;
-    }
+public class Dog 
+{
 
     /**
-     * Establece el nombre del perro
-     * @param name es el nombre de la mascota
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * Establece la raza del perro
-     * @param breed es la raza del perro
-     */
-    public void setBreed(String breed) {
-        this.breed = breed;
-    }
-
-    /**
-     * Establece el color del perro
-     * @param color es el color del perro
-     */
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    /**
-     * Establece la edad del perro
-     * @param age es la edad del perro en años
-     */
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    /**
-     * Devuelve el nombre del perro
-     * @return el nombre del perro.
+     * @return the name
      */
     public String getName() {
         return name;
     }
 
     /**
-     * Devuelve la raza del perro
-     * @return raza del perro
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * @return the breed
      */
     public String getBreed() {
         return breed;
     }
 
     /**
-     * Devuelve la edad del perro
-     * @return edad del perro en años.
+     * @param breed the breed to set
+     */
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+
+    /**
+     * @return the color
+     */
+    public String getColor() {
+        return color;
+    }
+
+    /**
+     * @param color the color to set
+     */
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    /**
+     * @return the age
      */
     public int getAge() {
         return age;
     }
 
     /**
-     * Devuelve el color del perro
-     * @return color del perro.
+     * @param age the age to set
      */
-    public String getColor() {
-        return color;
+    public void setAge(int age) {
+        this.age = age;
     }
-
-    /*
-    @Override
-    public String toString() {
-        return ("Hi my name is " + this.getName()
-                + ".\nMy breed,age and color are "
-                + this.getBreed() + "," + this.getAge()
-                + "," + this.getColor());
+    private String name;
+    private String breed;
+    private String color;
+    private int age;
+ 
+    // Constructor Declaration of Class
+    public Dog(String name,String breed,int 
+            age, String color)
+    {
+        this.name = name;
+        this.breed = breed;
+        this.age = age;
+        this.color = color;
     }
-    */
-    
-    /**
-     * @return Devuelve una cadena con los datos del perro-
-     */
+ 
+    // method 1
+    public String GetName()
+    {
+        return getName();
+    }
+ 
+    // method 2
+    public String GetBreed()
+    {
+        return getBreed();
+    }
+ 
+    // method 3
+    public int GetAge()
+    {
+        return getAge();
+    }
+ 
+    // method 4
+    public String GetColor()
+    {
+        return getColor();
+    }
+ 
     @Override
-    public String toString() {
-        StringBuilder cc = new StringBuilder("Hi my name is ");
-        cc.append(this.getName());
-        cc.append(".\nMy breed,age and color are ");
-        cc.append(this.getBreed());
-        cc.append(",");
-        cc.append(this.getAge());
-        cc.append(",");
-        cc.append(this.getColor());
-        return cc.toString();
+    public String toString()
+    {
+        return("Hi my name is "+this.GetName()+
+               ".\nMy breed,age and color are "+
+               this.GetBreed()+","+this.GetAge()+
+               ","+ this.GetColor());
+    }
+ 
+    public static void main(String[] args)
+    {
+        Dog tuffy = new Dog("tuffy","papillon", 5, "white");
+        System.out.println(tuffy.toString());
     }
 }
